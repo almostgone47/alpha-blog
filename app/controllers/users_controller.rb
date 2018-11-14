@@ -9,8 +9,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:success] = "Successful signup! Welcome!"
-      redirect_to article_path
+      redirect_to articles_path
     else
       render 'new'
     end
@@ -52,7 +53,7 @@ class UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :user_name)
   end
   
 end
