@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 4, maximum: 20 }
   validates :user_name, presence: true, uniqueness: true, length: { minimum: 2, maximum: 20 }
   has_secure_password
-  has_many :articles
+  has_many :articles, dependent: :destroy
 end

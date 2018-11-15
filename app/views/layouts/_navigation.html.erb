@@ -17,8 +17,11 @@
           Action
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to " New Article", new_article_path, class: "nav-link dropdown-item" %>
-          <a class="dropdown-item" href="#">Aaack!</a>
+          <%= link_to "New Article", new_article_path, class: "nav-link dropdown-item" %>
+          <% if current_user.admin? %>
+            <%= link_to 'Categories', categories_path, class: "nav-link dropdown-item" %>
+            <%= link_to "View Users", users_path, class: "nav-link dropdown-item" %>
+          <% end %>  
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -29,6 +32,7 @@
             My Profile
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "View Profile", user_path(current_user.id), class: "nav-link dropdown-item" %>
             <%= link_to "Edit Profile", edit_user_path(current_user.id), class: "nav-link dropdown-item" %>
             <%= link_to "Logout", logout_path, method: :delete, class: "nav-link dropdown-item" %>
         </div>
