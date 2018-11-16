@@ -5,6 +5,11 @@
     <hr>
     <%= simple_format(@article.description) %>
   </div>
+  <% if @article.categories.any? %>
+    <p>Categories: <% @article.categories.each do |cat| %>
+      <span class="badge"><%= link_to cat.name, category_path(cat) %> &nbsp; </span>
+    </p>
+  <% end %>
   <div id="show-btns">
     <%= link_to "Back", articles_path, class: "btn btn-secondary" %>
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>

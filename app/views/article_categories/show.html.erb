@@ -1,12 +1,11 @@
-<div class="container">
-  <h1 align="center" >All Articles</h1>
-  <hr>
+<h1 align="center"><%= "Articles by: " + @category.category_name %></h1>
+<div align="center">
   <table id="index">
     <tr>
       <th>Title</th>
       <th>Description</th>
     </tr>
-    <% @article.each do |article|%>
+    <% @category.articles.each do |article|%>
     <tr>
       <td><%= link_to article.title, article_path(article)%></td>
       <td><%= article.description %></td>
