@@ -10,7 +10,7 @@
   <% if @article.categories.any? %>
     <p>Categories: 
     <% @article.categories.each do |cat| %>
-      <span class="badge"><%= link_to cat.name, category_path(cat) %> &nbsp; </span>
+      <span class="badge"><%= link_to cat.category_name, category_path(cat) %> &nbsp; </span>
     </p>
     <% end %>
   <% end %>

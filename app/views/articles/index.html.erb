@@ -7,7 +7,7 @@
       <th>Description</th>
     </tr>
     
-      <%= will_paginate %>
+    <%= will_paginate %>
   
     <% @articles.each do |article|%>
     <tr>
@@ -19,7 +19,7 @@
       <% end %>
     </tr>
     <tr>
-      <td><small>Created By: <%= article.user.user_name %></small></td>
+      <td><small>Created By: <%= article.user.email %></small></td>
       <td><small>Created: <%= time_ago_in_words(article.created_at) %> ago, Updated: <%= time_ago_in_words(article.updated_at) %> ago</small></td>
     </tr>
     <tr>
