@@ -17,6 +17,11 @@ nav a{
   color:black;
 }
 
+.container{
+  width: 800px;
+  margin: auto;
+}
+
 body{
   min-height:100vh;
 }
@@ -36,12 +41,19 @@ body{
   background-size: cover;
   height: 550px;
 }
-
-footer{
-  margin: 0;
-  position: absolute;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 150px;
+}
+footer {
+  background: silver;
+  left: 0;
   bottom: 0;
   width: 100%;
+  height: 150px;
 }
 
 footer small {
@@ -81,6 +93,10 @@ td{
 
 #checkboxs{
   margin: 0 10px;
+}
+
+.text-center{
+  text-alight: center;
 }
 
 

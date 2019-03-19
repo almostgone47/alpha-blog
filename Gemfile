@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap', '~> 4.0.0'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -27,9 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'devise'
-gem 'bcrypt', '~> 3.1.7'
-gem 'omniauth', '~> 1.6', '>= 1.6.1'
-gem 'omniauth-google-oauth2', '~> 0.5.3'
 gem 'omniauth-facebook', '~> 5.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use ActiveStorage variant

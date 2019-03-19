@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 align="center" >All Users</h1>
+  <h1 class="center-text" >All Users</h1>
   <hr>
   <table id="index">
     <tr>
@@ -7,6 +7,7 @@
       <th>Email</th>
       <th>Admin</th>
     </tr>
+    <%= will_paginate %>
     <% @user.each do |user|%>
     <tr>
       <td><%= link_to user.user_name, user_path(user)%></td>
